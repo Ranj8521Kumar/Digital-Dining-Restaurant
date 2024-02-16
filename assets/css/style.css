@@ -573,17 +573,33 @@ body.nav-active { overflow: hidden; }
   #TOPBAR
 \*-----------------------------------*/
 
-.topbar { display: none; }
+.topbar { display: block; }
 
 
+.container{
+  display: flex;
+  justify-content: space-between;
+  
+}
+ .span{
+  font-size: 1rem;
+ }
 
+.topbar-item{
+  display: flex;
+  align-items: center;
+  
+}
 
+.icon{
+  font-size: 1.5rem;
+}
 
 /*-----------------------------------*\
   #HEADER
 \*-----------------------------------*/
 
-.header .btn { display: none; }
+.header .btn { display: block; }
 
 .header {
   position: fixed;
