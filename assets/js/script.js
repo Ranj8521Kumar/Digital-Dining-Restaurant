@@ -157,12 +157,12 @@ window.addEventListener("mousemove", function (event) {
   y = (event.clientY / window.innerHeight * 10) - 5;
 
   // reverse the number eg. 20 -> -20, -5 -> 5
-  x = x - (x * 2);
-  y = y - (y * 2);
+  x -= (x * 2);
+  y -=(y * 2);
 
   for (let i = 0, len = parallaxItems.length; i < len; i++) {
-    x = x * Number(parallaxItems[i].dataset.parallaxSpeed);
-    y = y * Number(parallaxItems[i].dataset.parallaxSpeed);
+    x *= Number(parallaxItems[i].dataset.parallaxSpeed);
+    y *= Number(parallaxItems[i].dataset.parallaxSpeed);
     parallaxItems[i].style.transform = `translate3d(${x}px, ${y}px, 0px)`;
   }
 
